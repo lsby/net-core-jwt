@@ -1,7 +1,6 @@
 {
-  "name": "playground-lib",
+  "name": "@lsby/net-core-jwt",
   "version": "0.0.0",
-  "private": true,
   "type": "module",
   "exports": {
     "require": "./dist/cjs/index.cjs",
@@ -24,6 +23,8 @@
     "test:coverage": "npm run check:all && vitest run --coverage && open-cli ./coverage/index.html"
   },
   "dependencies": {
+    "@lsby/net-core": "^0.0.20",
+    "@lsby/ts-jwt": "^0.0.1",
     "vitest": "^2.0.2",
     "zod": "^3.23.8"
   },
@@ -41,3 +42,4 @@
     "typescript": "^5.4.5"
   }
 }
+
