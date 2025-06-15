@@ -1,5 +1,5 @@
 {
-  "name": "@lsby/net-core-plugin-jwt",
+  "name": "@lsby/net-core-jwt",
   "version": "0.1.9",
   "type": "module",
   "exports": {
