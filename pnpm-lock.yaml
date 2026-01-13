@@ -15,8 +15,8 @@ importers:
         specifier: ^0.2.5
         version: 0.2.5
       '@lsby/ts-jwt':
-        specifier: ^0.0.2
-        version: 0.0.2(@types/node@20.12.10)
+        specifier: ^0.0.3
+        version: 0.0.3(@types/node@20.12.10)
       '@lsby/ts-log':
         specifier: ^0.3.1
         version: 0.3.1(@types/node@20.12.10)
@@ -550,8 +550,8 @@ packages:
   '@lsby/ts-fp-data@0.2.5':
     resolution: {integrity: sha512-PbegSfedf2lHqWIRGCahYaQqp/cR9Y8D2dzO/QzbB8c5/meUJyY1kxjvU5og6ToTSyqhJ1s0lGHmq7LXwdV/fA==}
 
-  '@lsby/ts-jwt@0.0.2':
-    resolution: {integrity: sha512-UWtnsaWnoUcRJlGlvEIvqf0OyozqWs9PEIyBJuO/8jOsfZtoHEVOzsPHAXd3tzMWo6qayQPYx1zU0/dnP/af5Q==}
+  '@lsby/ts-jwt@0.0.3':
+    resolution: {integrity: sha512-bMCXiPM0EgOuUNVx3mUd/MSJAQ8xQIpZt+pPfuj4zVzgVpzO67I/GAm6MC6PkIaqA8THw/mAGXuzKeI8F0VtQQ==}
 
   '@lsby/ts-log@0.3.1':
     resolution: {integrity: sha512-MCVZTItIxI3qkcKD88nh4tmFr/U9UnnI6DatvpN0DGGVQhsPHlcbE6aYV38gxNSxvNzwTok0tfp2gueeAtwUFQ==}
@@ -2835,9 +2835,10 @@ snapshots:
 
   '@lsby/ts-fp-data@0.2.5': {}
 
-  '@lsby/ts-jwt@0.0.2(@types/node@20.12.10)':
+  '@lsby/ts-jwt@0.0.3(@types/node@20.12.10)':
     dependencies:
       jsonwebtoken: 9.0.2
+      ms: 2.1.3
       vitest: 2.0.2(@types/node@20.12.10)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
