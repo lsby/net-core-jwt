@@ -3,7 +3,7 @@ import { 插件 } from '@lsby/net-core'
 import { Right } from '@lsby/ts-fp-data'
 import { JWT管理器 } from '@lsby/ts-jwt'
 
-class JWT解析插件<解析器类型描述Zod extends z.AnyZodObject> extends 插件<z.ZodNever, 解析器类型描述Zod> {
+export class JWT解析插件<解析器类型描述Zod extends z.AnyZodObject> extends 插件<z.ZodNever, 解析器类型描述Zod> {
   constructor(类型表示: 解析器类型描述Zod, jwt实例: JWT管理器<z.infer<typeof 类型表示>>) {
     super(z.never(), 类型表示, async (req, _res) => {
       var data = jwt实例.解析(req.headers.authorization ?? undefined)
@@ -12,11 +12,14 @@ class JWT解析插件<解析器类型描述Zod extends z.AnyZodObject> extends �
   }
 }
 
-type 签名正确类型<解析器类型描述Zod extends z.AnyZodObject> = z.ZodObject<{
+export type 签名正确类型<解析器类型描述Zod extends z.AnyZodObject> = z.ZodObject<{
   signJwt: z.ZodFunction<z.ZodTuple<[解析器类型描述Zod], null>, z.ZodString>
 }>
 
-class JWT签名插件<解析器类型描述Zod extends z.AnyZodObject> extends 插件<z.ZodNever, 签名正确类型<解析器类型描述Zod>> {
+export class JWT签名插件<解析器类型描述Zod extends z.AnyZodObject> extends 插件<
+  z.ZodNever,
+  签名正确类型<解析器类型描述Zod>
+> {
   constructor(类型表示: 解析器类型描述Zod, jwt实例: JWT管理器<z.infer<typeof 类型表示>>) {
     var 正确类型描述 = z.object({
       signJwt: z.function(z.tuple([类型表示]), z.string()),
